@@ -1,1 +1,28 @@
+#include <stdio.h>
 
+int main()
+{
+	int n=3;
+  int j=100;
+	
+	while(j<1000){
+		int k=j;
+		int sum=0;
+		while(k>0){
+		int a=k%10;
+		k/=10;
+		int b=1;
+		int t=a;
+		do{
+			t*=a;
+			b++;
+		}while(b<n);
+		sum+=t;
+		}
+		if(sum==j){
+			printf("%d\n",j);
+		}
+		j++;
+	}
+	return 0;	
+}
